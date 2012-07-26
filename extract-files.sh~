@@ -23,6 +23,7 @@ mkdir -p ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/lib
 mkdir -p ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/lib/egl
 mkdir -p ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/lib/hw
 mkdir -p ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/bin
+mkdir -p ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/etc
 
 # rill
 adb pull /system/lib/libril.so ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/lib
@@ -118,6 +119,8 @@ adb pull /system/lib/libmedia.so ../../../vendor/$MANUFACTURER/$DEVICE/proprieta
 adb pull /system/lib/libaudioflinger.so ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/lib
 adb pull /system/bin/mediaserver ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/bin
 adb pull /system/lib/invoke_mock_media_player.so ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/lib
+adb pull /system/etc/audio ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/etc
+adb pull /system/etc/asound.conf ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/etc
 
 # gps
 adb pull /system/lib/hw/gps.bcm21553.so ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/lib/hw
@@ -311,7 +314,13 @@ PRODUCT_COPY_FILES += \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/lib/libmedia.so:system/lib/libmedia.so \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/lib/libaudioflinger.so:system/lib/libaudioflinger.so \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/bin/mediaserver:system/bin/mediaserver \\
-    vendor/__MANUFACTURER__/__DEVICE__/proprietary/lib/invoke_mock_media_player.so:system/lib/invoke_mock_media_player.so
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/lib/invoke_mock_media_player.so:system/lib/invoke_mock_media_player.so \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/etc/audio:system/etc/audio \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/etc/asound.conf:system/etc/asound.conf
+
+## USB
+PRODUCT_COPY_FILES += \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/etc/usb_portd.conf:system/etc/usb_portd.conf	
 
 ##GPS
 PRODUCT_COPY_FILES += \\

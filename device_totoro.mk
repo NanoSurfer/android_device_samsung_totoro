@@ -158,7 +158,20 @@ PRODUCT_COPY_FILES += \
     device/samsung/totoro/prebuilt/etc/modem.sh:system/etc/modem.sh \
     device/samsung/totoro/prebuilt/etc/rndis.sh:system/etc/rndis.sh \
     device/samsung/totoro/prebuilt/etc/usbconfig.sh:system/etc/usbconfig.sh \
-    device/samsung/totoro/prebuilt/etc/usb_tether.sh:system/etc/usb_tether.sh
+    device/samsung/totoro/prebuilt/etc/usb_tether.sh:system/etc/usb_tether.sh \
+    device/samsung/totoro/prebuilt/etc/usb_portd.conf:system/etc/usb_portd.conf \
+    device/samsung/totoro/prebuilt/etc/asound.conf:system/etc/asound.conf \
+    device/samsung/totoro/prebuilt/etc/audio/LVVEFS_Rx_Configuration.txt:system/etc/audio/LVVEFS_Rx_Configuration.txt \
+    device/samsung/totoro/prebuilt/etc/audio/LVVEFS_Tx_Configuration.txt:system/etc/audio/LVVEFS_Tx_Configuration.txt \
+    device/samsung/totoro/prebuilt/etc/audio/Rx_ControlParams_EARPIECE_WIDEBAND.txt:system/etc/audio/Rx_ControlParams_EARPIECE_WIDEBAND.txt \
+    device/samsung/totoro/prebuilt/etc/audio/Rx_ControlParams_SPEAKER_WIDEBAND.txt:system/etc/audio/Rx_ControlParams_SPEAKER_WIDEBAND.txt \
+    device/samsung/totoro/prebuilt/etc/audio/Rx_ControlParams_WIRED_HEADPHONE_WIDEBAND.txt:system/etc/audio/Rx_ControlParams_WIRED_HEADPHONE_WIDEBAND.txt \
+    device/samsung/totoro/prebuilt/etc/audio/Rx_ControlParams_WIRED_HEADSET_WIDEBAND.txt:system/etc/audio/Rx_ControlParams_WIRED_HEADSET_WIDEBAND.txt \
+    device/samsung/totoro/prebuilt/etc/audio/Tx_ControlParams_EARPIECE_WIDEBAND.txt:system/etc/audio/Tx_ControlParams_EARPIECE_WIDEBAND.txt \
+    device/samsung/totoro/prebuilt/etc/audio/Tx_ControlParams_SPEAKER_WIDEBAND.txt:system/etc/audio/Tx_ControlParams_SPEAKER_WIDEBAND.txt \
+    device/samsung/totoro/prebuilt/etc/audio/Tx_ControlParams_WIRED_HEADPHONE_WIDEBAND.txt:system/etc/audio/Tx_ControlParams_WIRED_HEADPHONE_WIDEBAND.txt \
+    device/samsung/totoro/prebuilt/etc/audio/Tx_ControlParams_WIRED_HEADSET_WIDEBAND.txt:system/etc/audio/Tx_ControlParams_WIRED_HEADSET_WIDEBAND.txt 
+     
 
 # module
 PRODUCT_COPY_FILES += \

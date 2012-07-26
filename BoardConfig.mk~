@@ -23,6 +23,14 @@ TARGET_PROVIDES_INIT_TARGET_RC := true
 HAVE_HTC_AUDIO_DRIVER := true
 BOARD_USES_GENERIC_AUDIO := true
 BOARD_USES_ALSA_AUDIO := true
+BOARD_HAVE_BLUETOOTH := true
+BT_ALT_STACK := true
+BRCM_BT_USE_BTL_IF := true
+BRCM_BTL_INCLUDE_A2DP := true
+BRCM_BTL_INCLUDE_OBEX:=true
+BRCM_BTL_OBEX_USE_DBUS:=true
+TARGET_PREBUILT_BT := true
+BT_CHIP:=4330B1_26M
 TARGET_USE_SOFTWARE_AUDIO_AAC := true
 
 BOARD_HAVE_FM_RADIO := true
@@ -57,13 +65,8 @@ JS_ENGINE := v8
 
 # Bluetooth
 BOARD_HAVE_BLUETOOTH := true
-BT_ALT_STACK := true
-BRCM_BT_USE_BTL_IF := true
-BRCM_BTL_INCLUDE_A2DP := true
-BRCM_BTL_INCLUDE_OBEX:=true
-BRCM_BTL_OBEX_USE_DBUS:=true
-TARGET_PREBUILT_BT := true
-BT_CHIP:=4330B1_26M
+BOARD_HAVE_BLUETOOTH_BCM := true
+BOARD_FORCE_STATIC_A2DP := true
 
 # usb
 BOARD_USE_USB_MASS_STORAGE_SWITCH := true
@@ -100,7 +103,4 @@ WIFI_DRIVER_MODULE_PATH     := "/system/lib/modules/dhd.ko"
 WIFI_DRIVER_FW_STA_PATH     := "/system/etc/wifi/bcm4330_sta.bin"
 WIFI_DRIVER_FW_AP_PATH      := "/system/etc/wifi/bcm4330_aps.bin"
 WIFI_DRIVER_MODULE_ARG      := "firmware_path=/system/etc/wifi/bcm4330_sta.bin nvram_path=/system/etc/wifi/nvram.txt"
-WIFI_DRIVER_MODULE_NAME     := "bcm4330"
-
-BOARD_USE_USB_MASS_STORAGE_SWITCH := true
-
+WIFI_DRIVER_MODULE_NAME     := "dhd"
