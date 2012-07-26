@@ -91,5 +91,4 @@ ro.compcache.default=0
 persist.sys.use_dithering=0
 ro.telephony.call_ring.delay=0
 ro.ril.disable.power.collapse=0
-dalvik.vm.dexopt-data-only=1
 dalvik.vm.dexopt-flags=m=y
